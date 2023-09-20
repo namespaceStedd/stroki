@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import static Alex.Stroki.StrokiApplication.authorizeUser;
+import static Alex.Stroki.StrokiApplication.notAuthorized;
 
 @RestController
 public class Authorization {
@@ -32,6 +33,7 @@ public class Authorization {
 
         if(!authorize[0]) { // Если нет записи
             userRepository.save(user);
+            authorizeUser = login;
             status = "Пользователь " + login + " был успешно зарегистрирован";
         }
         else {
@@ -85,7 +87,7 @@ public class Authorization {
             return userInfo;
         }
         else
-            return "Вы не авторизованы в системе.";
+            return notAuthorized;
     }
 
 }

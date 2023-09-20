@@ -13,6 +13,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class StrokiApplication {
 
 	public static String authorizeUser;
+	public static String notAuthorized = "ОШИБКА!!! \nВы не авторизованы в системе.";
+	public static String notFoundOrNorAccess(String shortUrl) { return "ОШИБКА!!! \nСсылка \"" + shortUrl +"\" не найдена в базе данных или не является вашей."; }
 
 	public static void main(String[] args) {
 		SpringApplication.run(StrokiApplication.class, args);
