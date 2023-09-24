@@ -10,8 +10,19 @@ public class Url {
     private long id;
     private String url;
     private String shortUrl;
+    private int tranzit;
     private String user;
-    private int transit;
+
+    public Url() {
+    }
+
+    public Url(long id, String url, String shortUrl, int tranzit, String user) {
+        this.id = id;
+        this.url = url;
+        this.shortUrl = shortUrl;
+        this.tranzit = tranzit;
+        this.user = user;
+    }
 
     public long getId() {
         return id;
@@ -37,30 +48,19 @@ public class Url {
         this.shortUrl = shortUrl;
     }
 
+    public int getTranzit() {
+        return tranzit;
+    }
+
+    public void setTranzit(int tranzit) {
+        this.tranzit = tranzit;
+    }
+
     public String getUser() {
         return user;
     }
 
     public void setUser(String user) {
         this.user = user;
-    }
-
-    public int getTransit() {
-        return transit;
-    }
-
-    public void setTransit(int transit) {
-        this.transit = transit;
-    }
-
-    public Url() {
-    }
-
-    public Url(long id, String url, String shortUrl, String user, int transit) {
-        this.id = id;
-        this.url = url;
-        this.shortUrl = shortUrl;
-        this.user = user;
-        this.transit = transit;
     }
 }

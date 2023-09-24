@@ -50,7 +50,7 @@ public class URL {
             if (!isExist) {
                 long id = getLastId(model);
                 shortUrl = getShortUrl(id, url, model);
-                Url classUrl = new Url(id, url, shortUrl, authorizeUser, 0);
+                Url classUrl = new Url(id, url, shortUrl, 0, authorizeUser);
                 urlRepository.save(classUrl);
             }
 
@@ -94,8 +94,7 @@ public class URL {
                         urlInfo = "Идентификатор ссылки: " + iterUrl.getId()
                                 + "\nСсылка: " + iterUrl.getUrl()
                                 + "\nКороткая ссылка: " + iterUrl.getShortUrl()
-                                + "\nСоздана пользователем: " + iterUrl.getUser()
-                                + "\nКоличество переходов: " + iterUrl.getTransit();
+                                + "\nСоздана пользователем: " + iterUrl.getUser();
                         break;
                     }
         }
