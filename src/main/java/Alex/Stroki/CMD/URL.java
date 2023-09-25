@@ -94,6 +94,7 @@ public class URL {
                         urlInfo = "Идентификатор ссылки: " + iterUrl.getId()
                                 + "\nСсылка: " + iterUrl.getUrl()
                                 + "\nКороткая ссылка: " + iterUrl.getShortUrl()
+                                + "\nКоличество переходов: " + iterUrl.getTranzit()
                                 + "\nСоздана пользователем: " + iterUrl.getUser();
                         break;
                     }
